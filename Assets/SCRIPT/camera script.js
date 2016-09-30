@@ -1,0 +1,19 @@
+﻿v//Jimmy Vegas Unity 5 Tutorial
+//This script will allow your camera to follow the rocket
+
+
+var Target : Transform;
+var Distance : float = 14;
+var CameraY : float = 12;
+
+
+function Update() {
+     transform.position.z = Target.position.z -Distance;
+     transform.position.x = Target.position.x+7;
+}
+
+
+function LateUpdate() {
+   GetComponent.<Camera>().main.transform.position.y = CameraY;  
+
+}
